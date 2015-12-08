@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Актёрское агенство</title>
+	<link type="text/plain" rel="author" href="../humans.txt" />
+	<meta name="keywords" content="Актёрское агентство, актёр, актрисса" />
+	<meta name="description" content="" />
+	<link rel="icon" href="" type="image/x-icon" />
+	<link rel="shortcut icon" href="" type="image/x-icon" />
+	<link rel="shortcut icon" type="image/png" href="" />  
+	<link rel="stylesheet" href="" type="text/css" media="screen, projection" />
+	<link rel="stylesheet" href="/css/emoji.css">
+	<link rel="stylesheet" href="/css/pictos.css">
+	<link rel="stylesheet" href="/css/pictos-ie7.css">
+	<link rel="stylesheet" href="/css/pictos-codes.css">
+	<link rel="stylesheet" href="/css/pictos-embedded.css">
+	<link rel="stylesheet" href="/css/pictos-ie7-codes.css">
+	<link rel="stylesheet" href="/css/animation.css">
+	<link rel="stylesheet" href="/css/foundation.css">
+	<link rel="stylesheet" href="/css/app.css">
+
+	<!-- This is how you would link your custom stylesheet -->
+	<link rel="stylesheet" href="css/app.css">
+
+	<script src="js/vendor/modernizr.js"></script>
+
+
+	<!--[if lte IE 7]>
+	<link rel="stylesheet" href="http://assets3.insales.ru/assets/1/3972/249732/v_1435057425/build/ie.css" type="text/css" media="screen, projection" />
+	<![endif]-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script>
+
+
+		$(document).ready(function(){ 
+			$('#age').html("");
+			console.log('Hello');
+			var get_current_age = function(date) {
+				return new Date().getFullYear() - date;
+			};
+			$('#age').text("254");
+		});
+	</script>
+
+</head>
+
+<body>
+	<div id="content">                      <!-- beginning of content -->
+
+
+		<div class="row">
+			<div class="large-12 columns">
+				<div class="row">
+				
+					<div class="large-centered large-9 large-uncollapse medium-centered medium-uncollapse small-12 small-uncollapce small-centered columns">
+						<?php 
+						$dir = "images/";
+						$folder_list = array();
+						find_files_raw($dir, $folder_list);
+						$i = 0;
+						while ($i++ < count($folder_list)) {
+							$file = (string)$folder_list[$i];
+							$filter="ladys";
+							$pos = strpos($file, $filter);
+							if($pos !== false){
+								print(" 
+									<a class='large-12 large-uncollapsecolunms medium-4 small-3' href='#'>
+										<img src='".$dir."/".$file."'  alt='$file'>
+									</a>							
+									");
+							}
+						}
+						?>
+					</div>
+				</div>
+			</div>     
+		</div>
+		<script>
+			document.write('<script src=js/vendor/' +
+				('__proto__' in {} ? 'zepto' : 'jquery') +
+				'.js><\/script>')
+		</script>
+		<script src="../../assets/js/jquery.js"></script>
+		<script src="js/foundation.min.js"></script>
+		<script>
+			$(document).foundation();
+		</script>
+		<script src="../assets/js/templates/jquery.js"></script>
+		<script src="../assets/js/templates/foundation.js"></script>
+		<script>
+			$(document).foundation();
+
+			var doc = document.documentElement;
+			doc.setAttribute('data-useragent', navigator.userAgent);
+		</script>
+
+
+	</div>			<!-- end of content -->
+	<footer class="row">
+		<div class="large-8-centerd columns">
+			<hr>
+			<div class="row">
+				<div class="large-up-3 medium- small- columns">
+					<p>© Copyright no one at all. Go to town.</p>
+				</div>
+				<div class=" large-up-4 medium-up-4 small- columns">
+					<ul class="inline-list right">
+						<li>
+							<a href="#">Link 1</a>
+						</li>
+						<li>
+							<a href="#">Link 2</a>
+						</li>
+						<li>
+							<a href="#">Link 3</a>
+						</li>
+						<li>
+							<a href="#">Link 4</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<footer class="footer">
+		<div class="row">
+			<div class="small-12 columns">
+				<p class="slogan">Finger-lickin' good</p>
+				<p class="links">
+					<a href="#">Home</a>
+					<a href="#">Blog</a>
+					<a href="#">Pricing</a>
+					<a href="#">About</a>
+					<a href="#">Faq</a>
+					<a href="#">Contact</a>
+				</p>
+				<p class="copywrite">Copywrite not copypwrite © 2015</p>
+			</div>
+		</div>
+	</footer>
+	<div id="footer">
+		<script>
+	// 	document.write('<script src=js/vendor/' +
+	// 		('__proto__' in {} ? 'zepto' : 'jquery') +
+	// 		'.js><\/script>')
+</script>
+<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script src="js/foundation.min.js"></script>
+<script src="js/foundation/foundation.js"></script>
+
+<script>
+	$(document).foundation();
+	jQuery(document).ready(function  ($) {
+
+
+		var doc = document.documentElement;
+		doc.setAttribute('data-useragent', navigator.userAgent);
+	});
+</script>
+
+<div class="icon-bar three-up">
+	<div class="item"></div>
+	<a class="item" id="facebook"href="#">
+		<label></label>
+	</a>
+	<div class="item" href="#">
+		<label>© «Актёрское агентство» 2015</label>
+	</div>
+</div>
+</div> <!-- end of footer -->
+<!-- Не трогать тег! он начался в другом файле. -->
+
+<script src="bower_components/jquery/dist/jquery.js"></script>
+<script src="bower_components/what-input/what-input.js"></script>
+<script src="bower_components/foundation-sites/dist/foundation.js"></script>
+<script src="js/app.js"></script>
+
+<!--
+<script type='text/javascript' id="__bs_script__">//<![CDATA[
+  document.write("<script async src='http://HOST:3000/browser-sync/browser-sync-client.2.10.0.js'><\/script>".replace("HOST", location.hostname));
+  //]]></script>
+-->
+</body>
+</html>
+
+
+
+
+
+
+

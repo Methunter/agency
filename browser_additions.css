@@ -1,0 +1,11 @@
+div#cboxWrapper{
+	position: fixed;
+top: 50px;
+/* left: 474px; NOTE: Важно, что бы ширину и лево рапер заимствовал у предка, иначе разъедутся */
+
+margin: 0 auto;
+z-index: 9999;
+}
+#docContainer{
+}
+form#docContainer.fb-toplabel.fb-small.fb-50-item-column.selected-object

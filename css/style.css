@@ -1,0 +1,38 @@
+body {
+  margin: 0;
+    font-size: 12px;
+    background-color: #000;
+    color: #fff;
+
+}
+.menu {
+  color: #fff; 
+  font-size: 45px;
+  list-style: none;
+  text-decoration: none;
+}
+/*ul.menu li {
+    display: inline; 
+    margin-right: 5px; 
+    border: 1px solid #000; 
+    padding: 3px; 
+
+   }
+   ul.menu li:first-child{
+    padding-left: 320px;
+   }*/
+#footer{
+
+  height: 80px;
+}
+#facebook{
+  width: 29px !important;
+  height: 29px !important;
+  background-image: url(../images/facebook.gif);
+  background-color: #c7b39b; /* Цвет фона */
+
+}
+#content{
+	background-color: #000;
+	color: #fff;
+}

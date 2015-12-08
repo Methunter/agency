@@ -1,0 +1,21 @@
+{
+	"names": ["Главная", "МУЖЧИНЫ", "ЖЕНЩИНЫ", "КОНТАКТЫ"],
+	"titles" : [{
+			"title" : "ГЛАВНАЯ",
+			"link" : "index.php"
+		},{
+			"title" : "МУЖЧИНЫ",
+			"link" : "jents.php"
+
+		},{
+			"title" : "ЖЕНЩИНЫ",
+			"link" : "ladys.php"
+		},{
+			"title" : "КОНТАКТЫ",
+			"link" : "contacts.php"
+		},{
+			"title" : "ADMIN",
+			"link" : "admin.php"
+		}
+	]
+}

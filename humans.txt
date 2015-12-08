@@ -1,0 +1,15 @@
+/* TEAM */
+	Chef:Dmitriy Okhotnikov
+	Contact: me3sa [at] me.com
+	From:Moscow, Moscow, Russia
+
+/* THANKS */
+
+	
+		
+
+/* SITE */
+	Last update:11/10/2015
+	Language:  Russian / 
+	Doctype:HTML5
+	IDE: Sublime Text,  Photoshop
