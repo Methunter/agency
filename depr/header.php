@@ -23,8 +23,12 @@
 	<!-- This is how you would link your custom stylesheet -->
 	<link rel="stylesheet" href="css/app.css">
 
-	<script src="js/vendor/modernizr.js"></script>
-	<script src="../"></script>
+
+
+  <script src="js/vendor/jquery.js"></script>
+  <script src="js/foundation/foundation.js"></script>
+  <script src="js/foundation/foundation.reveal.js"></script>
+  <!-- Other JS plugins can be included here -->
 
 	<!--[if lte IE 7]>
 	<link rel="stylesheet" href="http://assets3.insales.ru/assets/1/3972/249732/v_1435057425/build/ie.css" type="text/css" media="screen, projection" />
@@ -34,7 +38,7 @@
 
 
 <script>
-
+matterO("show");
 
  	$(document).ready(function(){
  		$('#age').html("");

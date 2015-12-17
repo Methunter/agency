@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Untitled</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="author" href="humans.txt">
+	<link rel="stylesheet" href="css/foundation.css">
+
+	<!-- This is how you would link your custom stylesheet -->
+	<link rel="stylesheet" href="css/app.css">
+
+	<script src="js/vendor/modernizr.js"></script>
+</head>
+<body>
+
+	<h1>Test</h1>
+	<p>One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections. The bedding was hardly able to cover it and seemed ready to slide off any moment. His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. "What's happened to me? " he thought.</p>
+
+	<a href="#" data-reveal-id="myModal">Click Me For A Modal</a>
+
+	<div id="myModal" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+		<h2 id="modalTitle">Awesome. I have it.</h2>
+		<p class="lead">Your couch.  It is mine.</p>
+		<p>I'm a cool paragraph that lives inside of an even cooler modal. Wins!</p>
+		<a class="close-reveal-modal" aria-label="Close">&#215;</a>
+	</div>
+
+	<script src="bower_components/jquery/dist/jquery.js"></script>
+	<script src="bower_components/foundation-sites/dist/foundation.min.js"></script>
+	<script src="bower_components/foundation-sites/dist/foundation.js"></script>
+	<script src="bower_components/foundation-sites/js/foundation.reveal.js"></script>
+	<script>
+	!(function($){
+
+	$('document').foundation('reveal','open');
+})(jQuery);
+
+	</script>
+	<script src="js/matter.js"></script>
+</body>
+</html>

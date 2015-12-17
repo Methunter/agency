@@ -1,26 +1,48 @@
 <?php
-$page="admin";
 include_once("inc/header.php");
 ?>
 
 
 
-<!-- Start of the body content for CoffeeCup Web Form Builder -->
-<a class='fb_iframe' href="./addPerson/addPerson.html">Click here</a>
-<!-- End of the body content for CoffeeCup Web Form Builder -->
-<script src="./addPerson/common/libs_js/jquery-1.4.4.min.js"></script>
-<script src="./addPerson/colorbox/jquery.colorbox.js"></script>
+
+<a class='form_link' href="new.html">Click here</a>
+<div id="form_place"></div>
 
 
-<script>
-  var $fb_pop = jQuery.noConflict();
+  <script>
+  // IIFE - Immediately Invoked Function Expression
+  (function($, window, document) {
 
-  $fb_pop(document).ready(function(){
-    setTimeout( function(){ $fb_pop.colorbox({href:"./addPerson/addPerson.html", iframe:true, innerWidth:"475px", height:"60%", maxHeight:"880px", fixed:true}) }, 30 );
-    $fb_pop(".fb_iframe").colorbox({iframe:true, innerWidth:"475px", height:"80%", maxHeight:"1480px", fixed:true }); 
-  });
-</script>
+    // The $ is now locally scoped 
+
+   // Listen for the jQuery ready event on the document
+   $(function() {
+
+     // The DOM is ready!
+     console.log('The DOM is ready!');
+     $(".form_link").on('click', function(event) {
+     	event.preventDefault();
+     	$('#form_place').matterO("getName" , "new.html" ).done(function(data){
+     		$("#form_place").html(data);
+     	});
+     });	
+     $("#get-out").on('click', function(event) {
+
+     	console.log("close!");
+     	$('#form_place').html("");
+     });
+
+
+
+
+   });
+
+   // The rest of code goes here!
+    console.log('The DOM may not be ready!');
+
+  }(window.jQuery, window, document));
+  </script>
 <?php
 include("inc/footer.php");
-?>cs
+?>
 

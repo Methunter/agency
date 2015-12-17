@@ -4,110 +4,25 @@
 // 	* @Last Modified by:   m32sa
 // 	* @Last Modified time: 2015-12-07 08:43:46
 // 	*/
-
-
-// 	(function( $ ){
-// 		'use strict';
-// 		var methods = {
-// 			init: function( options ) {
-
-// 			},
-// 			enlight: function(){
-// 				$(this).each(function () {if ($("a").href == $.trim(location.href).last()) $this.attr({
-// 					id: 'current'});
-// 				console.log(location.href);
-// 			});
-// 			},
-// 			getActors:  function(){
-
-// 				$.getJSON( "http://master.m32sa.com/json/actress_olga_vinichenko.json",
-// 					function( resp ) {
-// 						$this.html( 'Results: ' + resp.results.length );
-// 						cinsole.console.log('ajax: ' + resp + $this + $(this));
-// 					}
-// 					);
-// 			},
-// 			// show : function( ) {
-// 		 //  // ПОДХОД
-// 			// },
-// 		// 	hide : function( ) {
-// 		//   // ПРАВИЛЬНЫЙ
-// 		// },
-// 		update : function( content ) {
-// 			$(this).append(content )
-// 		},
-
-// 		wha : function() {
-// 			if (typeof $(this)) {
-// 				console.log(typeof this)
-// 			} else{
-// 				console.log('Ну хуй знает...');
-// 			};
-// 		},
-// 		size : function(obj) {
-// 			var size = 0, key;
-// 			for (key in obj) {
-// 				if  (obj.hasOwnProperty(key)) {
-// 					size++;
-// 					console.log(size);
-// 				}else{
-// 					console.log("no sizr );");
-// 				}
-// 			}
-// 			return size;
-// 		},
-// 		matero : function() {
-// 			console.log('I AM MATTER!!!!');
-// 		}
-// 	};
-
-// 	$.fn.matter = function( method ) {
-// 	 // логика вызова метода
-// 	 if ( methods[method] ) {
-// 	 	console.log('The Matter is ' + methods[ method ] );
-// 	 	return methods[ method ].apply( this, Array.prototype.slice.call( arguments, 1 ));
-// 	 } else if ( typeof method === 'object' || ! method ) {
-// 	 	console.log('The Matter is ' + methods[ method ]);
-// 	 	return methods.init.apply( this, arguments );
-// 	 } else {
-// 	 	$.error( 'Метод с именем ' +  method + ' не существует для jQuery.matter' );
-// 	 }
-
-// 	};
-// 	$.matter("matero")
-// })( jQuery );
-
-
-
-
-
-
-
-
-
 (function( $ ){
 
 	var methods = {
-		init : function( options ) {
-
-			return this.each(function(){
-				$(window).bind('resize.matter', methods.reposition);
-			});
-
+		list_exp: function( actor , name , key  ){
+			var result =  "<ul>" ;
+			for (var i = actor.olgaVinichenko.theatre_expirience.length - 1; i >= 0; i--) {
+				result += "<li id=" + key + "> " + actor.olgaVinichenko.theatre_expirience[i]  +  "</li>";
+			}
+			result += "</ul>";
+			return result;
 		},
-		destroy : function( ) {
+		list_educ: function( actor , name , key ){
+			var result =  "<ul>" ;
 
-			return this.each(function(){
-				$(window).unbind('.matter');
-			})
-
-		},
-		describe : function(){
-			this.each(function(index, el) {
-				console.log("El is : " + el + typeof($(this)));
-				console.log("content: " + $(this)[0]);
-				console.log($(this).length);
-			});
+			for (var i = actor.olgaVinichenko.education.length - 1; i >= 0; i--) {
+				result += "<li id=" + key + "> " + actor.olgaVinichenko.education[i]  +  "</li>";
+			}
+			result += "</ul>";
+			return result;
 		},
 		enlight: function(){
 			var pathname = window.location.pathname,
@@ -118,25 +33,39 @@
 				if ( page == item) {
 					$(this).attr("id","current");
 				}
-		});
+			})
 		},
-		// reposition : function( ) { 
-  //      // ... 
-  //  		},
-  show : function( ) { 
-  	console.log('I AM MATTER!!!!');
-  },
-  hide : function( ) {
-       // ... 
-  },
-   update : function( content ) { 
-       // ...
-   }
-};
+		age_reveal : function(){
+			$('#age').html("");
+			var get_current_age = function(date) {
+				return new Date().getFullYear() - date;
+			};
+			$('#age').text("254")
+		},
+		show : function( ) { 
+			console.log('I AM MATTER!!!!');
+		},  
+		getName : function(   url_to_file  ){
+			var dynamicData = {};
+		    // dynamicData["id"] = personID;
+		    return $.ajax({
+		    	url: url_to_file ,
+		    	type: "get",
+			    // data: dynamicData
+			}).done(function(data) {
+				console.log( "success"  );
+			}).fail(function(data) {
+				console.log( "error"  );
+			}).always(function(data) {
+				console.log( "complete"  );
+			});
+			
+		}
+	}
 
-$.fn.matter = function( method ) {
+	$.fn.matterO = function( method ) {
 
-	if ( methods[method] ) {
+		if ( methods[method] ) {
 		// console.log('The Matter is ' + methods[ method ]) ;
 		// console.log(this.length ? 'The this is ' +  this.length + "\nAnd Also: " + $(this): 'The this is ' +  this ) ;
 		// console.log(arguments.length ? 'The arguments is ' + arguments.length : 'The arguments is ' +  arguments ) ;
@@ -147,11 +76,44 @@ $.fn.matter = function( method ) {
 	} else {
 		$.error( 'Метод с именем ' +  method + ' не существует для jQuery.tooltip' );
 	}    
-
 };
-
 })( jQuery );
 
+/************************************************ Запасники ************************************************//*
+$('ul#stage').html(""); //Note: Остаётся.
 
-// Некоторое время спустя...
-// $('#fun').matter('show');
+				$('ul#stage').append('<li id=' + key + '> Имя: ' + actor.olgaVinichenko.name + '</li>');
+				$('ul#stage').append('<li id=' + key + '>Дата рождения : ' + actor.olgaVinichenko.B_date+ '</li>');
+				$('ul#stage').append('<li id=' + key + '> Место рождения: ' + actor.olgaVinichenko.B_place+ '</li>');
+				$('ul#stage').append('<li id=' + key + '> Образование: <ul>');
+				for (var i = actor.olgaVinichenko.education.length - 1; i >= 0; i--) {
+					$('ul#stage').append(actor.olgaVinichenko.education[i]  +  '</li>/<ul></li>');
+				}
+				$('ul#stage').append('<li id=' + key + '> Работы в театре: ' );
+				for (var i =  actor.olgaVinichenko.theatre_expirience.length - 1; i >= 0; i--) {
+					$('ul#stage').append( actor.olgaVinichenko.theatre_expirience[i]  +  '</li>/<ul></li>');
+				}page layout backUp 
+
+Некоторое время спустя...
+$('#fun').matter('show');
+/**************************** AJAX ****************************//*
+
+  function getName(personid) {
+    var dynamicData = {};
+    dynamicData["id"] = personID;
+    return $.ajax({
+      url: "getName.php",
+      type: "get",
+      data: dynamicData
+    });
+  }
+
+  getName("2342342").done(function(data) {
+    // Updates the UI based the ajax result
+    $(".person-name").text(data.name); 
+  });
+
+
+
+
+*/

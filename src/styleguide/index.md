@@ -315,7 +315,7 @@ Form elements in Foundation are styled based on their type attribute rather than
   </div>
   <div class="row">
     <div class="large-12 columns">
-      <label>Select Box</label>
+      <label>Select Box</label>option></option>
       <select>
         <option value="good">Good</option>
         <option value="better">Better</option>

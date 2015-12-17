@@ -1,24 +1,12 @@
 <?php 
-include("inc/header.php"); ?>                   <!-- beginning of content -->
+include("inc/header.php"); 
+
+?>                   <!-- beginning of content -->
 
 
 
 
-<script src="/js/jquery.js"></script>
-<script src="/js/foundation.js"></script>
 
-
-<script>
-	$(document).foundation();
-</script>
-
-<div class="bg-tagline">
-	<h1 class="tagline">Awesome tagline here<br><a href="#" data-reveal-id="firstModal">t&c</a></h1>
-</div>
-<div id="firstModal" class="reveal-modal medium" data-reveal="">
-	<p>TEST</p>
-	<a class="close-reveal-modal">x</a>
-</div>            
 
 
 
@@ -26,7 +14,7 @@ include("inc/header.php"); ?>                   <!-- beginning of content -->
 
 <?php
 
-/**
+/*ol
  * @Author: m32sa
  * @Date:   2015-12-04 00:43:11
  * @Last Modified by:   m32sa
@@ -34,54 +22,79 @@ include("inc/header.php"); ?>                   <!-- beginning of content -->
  */
 // include 'inc/header.inc';
 ?>
-
-
-<ul id="driver"></ul>
+<h1 id="panel"></h1>
+<ul class="actor"></ul>
+<div class="actor" id="valeriaBudankova"><h1>budankova</h1></div>
+<div class="actor" id="olgaVinichenko"><h1>olga</h1></div>
+<!-- <ul id="driver"><li></li></ul> -->
 <ul id="stage"></ul>
+ <script src="/js/matter.js"></script>
+
 <script type="text/javascript" language="javascript">
 	$(document).ready(function() {
-		$.getJSON( 'json/actress_olga_vinichenko.json',
-			function( resp ) {
-				$( '#stage' ).html( 'Results: ' + resp.olgaVinichenko.name + resp.olgaVinichenko.education.length);
-			});
-		$("#driver").click(function(event){
-			$.getJSON('json/actress_olga_vinichenko.json', function(actor) {
-
-				console.log(actor);
-				$('ul#stage').append('<li> Имя: ' + actor.olgaVinichenko.name + '</li>');
-				$('ul#stage').append('<li>Дата рождения : ' + actor.olgaVinichenko.B_date+ '</li>');
-				$('ul#stage').append('<li> Место рождения: ' + actor.olgaVinichenko.B_place+ '</li>');
-
-											while(actor.olgaVinichenko.education.length){
-									$('ul#stage').append('<li> Образование: <ul>' + actor.olgaVinichenko.education[i]  +  '</li>/<ul></li>');
-										console.log(actor.olgaVinichenko.education[i]); 
+var test = function(string){
+	console.log(string);
 }
-				$('ul#stage').append('<li> Работы в театре: ' + actor.olgaVinichenko.theatre_expirience+ '</li>');
-			
+var list_exp = function( actor , name , key  ){
+		var result =  "<ul>" ;
 
-			});
+		for (var i = actor.olgaVinichenko.theatre_expirience.length - 1; i >= 0; i--) {
+			result += "<li id=" + key + "> " + actor.olgaVinichenko.theatre_expirience[i]  +  "</li>";
+1		}
+		result += "</ul>";
+	return result;
+}
+var list_educ = function( actor , name , key ){
+		var result =  "<ul>" ;
+
+		for (var i = actor.olgaVinichenko.education.length - 1; i >= 0; i--) {
+			result += "<li id=" + key + "> " + actor.olgaVinichenko.education[i]  +  "</li>";
+		}
+		result += "</ul>";
+	return result;
+}
+
+		var otvet ;
+$("div.actor").click(function(event){
+	var actorName = ""
+	actorName = $(this).attr('id');
+	test("actor's name is: " + actorName);
+	$("#panel").html("Name of the Actor: " + actorName);
+	$.getJSON('json/actors.json', function(actor){
+	$(this).html("");
+	var items = [];
+	var array_of_acts_names = [];
+	$.each( actor, function( key, val ) {
+
+			items.push( "<li id='" + key + "'>" + val.length + "</li>" );
+
+	var theaExp = list_exp(actor , actorName, key );
+	var personal_education = list_educ(actor , actorName, key );
+			array_of_acts_names.push(
+'<li id=' + key + '> Имя: ' + actor.olgaVinichenko.name + '</li>'+
+'<li id=' + key + '>Дата рождения : ' + actor.olgaVinichenko.B_date+ '</li>'+
+'<li id=' + key + '> Место рождения: ' + actor.olgaVinichenko.B_place+ '</li>'+
+'<li id=' + key + '> Образование: '+ personal_education +
+'<li id=' + key + '> Работы в театре: '+ theaExp 
+			);// [array_of_acts_names].push();	
 		});
+		$("#"+actorName).replaceWith($( "<ul>", {
+				"class": "actor",
+				html: array_of_acts_names.join( "" )
+				}));
 
-				
+});
+});
+});
+</script>
+
+<!-- <script src="/js/jquery.js"></script>
+<script src="/js/foundation.js"></script>
+ -->
 
 
-				// $('div.top_menu li').each(function () {
-				// 	if ($("a")[0].href == location.href) this.className = "current";});
-				var test;
-				var menu = $.getJSON("json/main_menu.json", function(resp){
-					test = resp;
-					return resp;});
-				// menu = $.parseJSON(menu);
-				// test.matter("desctibe");
-				// for (var i = 0; i < menu.names.length; i++) {
-				// 		$("ul#driver").append("<li>" + menu.names[i] +"</li>" );
-				// 	};	
-				// for (var i = 0; i <= menu.titles.length; i++) {
-				// 		$("ul#driver").append("<li class='menu'><a href=" + menu.titles[i].link + ">" + i + " : " + menu.titles[i].title + "</li>" );
-				// 	};
-		});
-		</script>
-		<?php
-		include_once("inc/footer.inc");
-		?>
+
+<?php
+include_once("inc/footer.inc");
+?>
 

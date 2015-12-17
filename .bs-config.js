@@ -19,7 +19,7 @@
             "port": 4361
         }
     },
-    "files": ["*.*", "css/*.css", "inc/*", "js/*"],
+    "files": ["*.*", "css/*.css", "inc/*", "js/*","addPerson/*"],
     "watchOptions": {},
     "server":false,
     // "server": {"baseDir": "."},

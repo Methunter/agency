@@ -1,6 +1,5 @@
 <div class="row">
-<div class="icon-bar five-up">
-	</style>
+<div class="icon-bar five-up top-menu">
 	<?php 
 	while ( $i++ < count($topBarContent)) {
 		print_r('<a href="'.$pagination[$i].'" class="item line"><label class="">'.$topBarContent[$i].'</label></a>');
@@ -10,5 +9,5 @@
 </div>
 	
 <script>
-	$(".item.line").matter("enlight");
+	$(".item.line").matterO("enlight");
 </script>

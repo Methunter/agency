@@ -7,7 +7,6 @@
  * @requires foundation.util.mediaQuery
  * @requires foundation.util.motion if using animations
  */
-
 !function(Foundation, $) {
   'use strict';
 
@@ -39,13 +38,13 @@
      * @option
      * @example 'slide-in-left'
      */
-    animationIn: 'slide-in-left',
+    animationIn: '',
     /**
      * Motion-UI class to use for animated elements. If none used, defaults to simple show/hide.
      * @option
      * @example 'slide-out-right'
      */
-    animationOut: 'slide-out-right',
+    animationOut: '',
     /**
      * Time, in ms, to delay the opening of a modal after a click if no animation used.
      * @option
@@ -141,7 +140,7 @@
       this.options.fullScreen = true;
       this.options.overlay = false;
     }
-    if(this.options.overlay){
+    if(this.options.overlay && !this.$overlay){
       this.$overlay = this._makeOverlay(this.id);
     }
 

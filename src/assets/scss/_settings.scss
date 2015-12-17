@@ -44,11 +44,11 @@
 // 1. Global
 // ---------
 
-$global-width: rem-calc(1200);
-$global-font-size: 100%;
-$global-lineheight: 1.5;
-$primary-color: #2199e8;
-$secondary-color: #777;
+
+/**/
+#cboxWrapper {/*
+    position: fixed;
+    top: 50px;
 $success-color: #3adb76;
 $warning-color: #ffae00;
 $alert-color: #ec5840;
@@ -439,6 +439,19 @@ $reveal-zindex: 1005;
 $reveal-overlay-background: rgba($black, 0.45);
 
 // 28. Slider
+
+418 matches across 66 files
+
+
+Searching 1 file for "height"
+
+Unable to open <untitled 149>
+0 matches
+
+Searching 100 files for "Wrapper"
+
+Unable to open <untitled 149>
+/Users/m32sa/Sites/master/addPerson/colorbox/colorbox.css:
 // ----------
 
 $slider-height: 0.5rem;

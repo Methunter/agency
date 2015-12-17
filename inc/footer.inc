@@ -1,5 +1,4 @@
-</div>			<!-- end of content -->
-<footer class="row">
+<!-- <footer class="row">
 	<div class="large-8-centerd columns">
 		<hr>
 		<div class="row">
@@ -24,22 +23,25 @@
 			</div>
 		</div>
 	</div>
-</footer>
-<footer class="footer">
-	<div class="row">
-		<div class="small-12 columns">
-			<p class="slogan">Finger-lickin' good</p>
-			<p class="links">
-				<a href="#">Home</a>
-				<a href="#">Blog</a>
-				<a href="#">Pricing</a>
-				<a href="#">About</a>
-				<a href="#">Faq</a>
-				<a href="#">Contact</a>
-			</p>
+</footer> -->
+<footer class="">
+<hr>
+<!-- <selection> -->
+	<!-- </selection> -->
+		<div class="row">
+			<div class=" icon-menu   menu ">
+				<!-- <li class=""> -->
+				<a href="#" class="item line" ><label class="">Home</label></a>
+				<!-- </li> -->
+				<!-- <li class=""> -->
+				<a href="#" class="item line" ><label class="">Blog</label></a>
+				<!-- </li> -->
+				<!-- <li class=""> -->
+				<a href="#" class="item line" ><label class="">Pricing</label></a>
+				<!-- </li> -->
+			</div>
 			<p class="copywrite">Copywrite not copypwrite © 2015</p>
 		</div>
-	</div>
 </footer>
 <div id="footer">
 <script>
@@ -47,7 +49,7 @@
 	// 		('__proto__' in {} ? 'zepto' : 'jquery') +
 	// 		'.js><\/script>')
 
-		// $(document).foundation();
+		$(document).foundation();
 		// jQuery(document).ready(function  ($) {
 
 
@@ -74,6 +76,7 @@
   document.write("<script async src='http://HOST:3000/browser-sync/browser-sync-client.2.10.0.js'><\/script>".replace("HOST", location.hostname));
   //]]></script>
 -->
+</div>			<!-- end of content -->
 
 </body>
 </html>

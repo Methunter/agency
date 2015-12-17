@@ -27,13 +27,6 @@ include_once('inc/header.inc');
 		</div>
 	</div>     
 </div>
-<script src="js/foundation.min.js"></script>
-<script src="js/jquery.js"></script>
-<script>
-	// document.write('<script src=js/vendor/' +
-	// 	('__proto__' in {} ? 'zepto' : 'jquery') +
-	// 	'.js><\/script>')
-</script>
 <script>
 
 
