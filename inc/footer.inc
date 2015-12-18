@@ -26,48 +26,21 @@
 </footer> -->
 <footer class="">
 <hr>
-<!-- <selection> -->
-	<!-- </selection> -->
-		<div class="row">
-			<div class=" icon-menu   menu ">
-				<!-- <li class=""> -->
-				<a href="#" class="item line" ><label class="">Home</label></a>
-				<!-- </li> -->
-				<!-- <li class=""> -->
-				<a href="#" class="item line" ><label class="">Blog</label></a>
-				<!-- </li> -->
-				<!-- <li class=""> -->
-				<a href="#" class="item line" ><label class="">Pricing</label></a>
-				<!-- </li> -->
-			</div>
-			<p class="copywrite">Copywrite not copypwrite © 2015</p>
-		</div>
+		<!-- <div class="row"> -->
+			<ul class="icon-bar menu expanded ">
+				<li class="item line">
+				<a href="#" class="" >Home</a>
+				</li>
+				<li class="item line">
+				<p class="copywrite">© «Актёрское агентство» 2015</p>
+				</li>
+				<li class="item line">
+				<a class="" id="facebook"href="#"><label for="facebook">Facebook</label></a>				
+				</li>
+			</ul>
+
+		<!-- </div> -->
 </footer>
-<div id="footer">
-<script>
-	// 	document.write('<script src=js/vendor/' +
-	// 		('__proto__' in {} ? 'zepto' : 'jquery') +
-	// 		'.js><\/script>')
-
-		$(document).foundation();
-		// jQuery(document).ready(function  ($) {
-
-
-		// 	var doc = document.documentElement;
-		// 	doc.setAttribute('data-useragent', navigator.userAgent);
-		// });
-	</script>	
-
-	<div class="icon-bar three-up">
-		<div class="item"></div>
-		<a class="item" id="facebook"href="#">
-			<label></label>
-		</a>
-		<div class="item" href="#">
-			<label>© «Актёрское агентство» 2015</label>
-		</div>
-	</div>
-</div> <!-- end of footer -->
 <!-- Не трогать тег! он начался в другом файле. -->
 
 

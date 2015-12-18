@@ -32,12 +32,7 @@ footer .menu > li {
    ul.menu li:first-child{
     /*padding-left: 320px;*/
     }
-#footer{
-	height : 80px;
-}
-footer menu {
-	
-}
+
 #facebook{
 	height              : 50px !important;
 	width               : 50px !important;
@@ -99,11 +94,6 @@ footer menu {
 	height           : 480px;
 	background-color : #FC0055;
 }
-
-#footer{
-	
-}
-
 .floatout {
 	float   : none !important;
 	top     : 0 !important;
@@ -139,4 +129,7 @@ footer menu {
 #current{
 	font-size : 2em;
 	color     : red;
+}
+.menu.expanded > li:nth-last-child(3):first-child, .menu.expanded > li:nth-last-child(3):first-child ~ li{
+	width: 32.333333333%;
 }
