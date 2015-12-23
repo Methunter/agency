@@ -4,7 +4,7 @@ include_once('inc/header.php');
 <div class="row push-down-1">
 
 		<div class="row">
-			<ul class="large-centered large-10 large-up-7 large-uncollapse medium-12 medium-up-6 medium-uncollapse  medium-centered small-12 small-up-4   columns no-bullet">
+			<ul class="large-centered large-10 large-up-6 large-uncollapse medium-12 medium-up-5 medium-uncollapse  medium-centered small-12 small-up-4   columns no-bullet">
 				<?php 
 // 					large-centered large-9 large-uncollapse medium-centered medium-uncollapse small-12 small-uncollapce small-centered columns
 				$dir = "images/";

@@ -165,6 +165,15 @@ gulp.task('server', ['build'], function() {
 
 // Build the site, run the server, and watch for file changes
 gulp.task('default', ['build', 'server'], function() {
+   gulp.src('pages/**/*.html')
+    .pipe(panini({
+      root: 'pages/'
+      layouts: 'layouts/',
+      partials: 'partials/',
+      helpers: 'helpers/',
+      data: 'data/'
+    }))
+    .pipe(gulp.dest('build'));
   gulp.watch(PATHS.assets, ['copy', browser.reload]);
   gulp.watch(['src/pages/**/*.html'], ['pages', browser.reload]);
   gulp.watch(['src/{layouts,partials}/**/*.html'], ['pages:reset', browser.reload]);

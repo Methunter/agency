@@ -2,10 +2,22 @@
  .reveal {
  	color: #4f4f4f;
  }
-
+.center-matter{
+	position: relative;
+	left: 50%;
+	right: 50%;
+}
+.menu li a.active{
+	    border-bottom: 2px solid dodgerblue; 
+	    transition: all 0.3s ease-in-out;  
+	     } 
  /* Footer */
  
+menu a.active{
+	      border-bottom: 2px solid dodgerblue; 
 
+	    transition: all 0.3s ease-in-out;
+	}
  .footer {
  	background-color: #292c2f;
  	text-align: center;
@@ -38,5 +50,10 @@
  	content: "";
  	padding: 0 0.4rem 0 0.8rem; 
  }
+   @media screen and (min-device-width: 40em) {
+.menu a.active{
+	  /*    border-bottom: 2px solid dodgerblue; 
 
- 
+	    transition: all 0.3s ease-in-out;*/  
+	     } 
+}

@@ -1,22 +1,3 @@
-<!-- <footer class="">
-		<div class="row">
-			<ul class="icon-bar menu expanded ">
-				<li class="item line">
-				<a href="../dist/" class="" >Home</a>
-				</li>
-				<li class="item line">
-				<p class="copywrite">© «Актёрское агентство» 2015</p>
-				</li>
-				<li class="item line">
-				<a class="" id="facebook"href="#"><label for="facebook">Facebook</label></a>				
-				</li>
-			</ul>
-
-		</div>
-
-
-</footer> -->
- <!-- <footer class="footer sticky"  data-sticky data-top-anchor="" data-btm-anchor="html:bottom"  > -->
  <footer class="footer "    >
 <hr>
   <div class="row">
@@ -38,8 +19,10 @@
 </div>			<!-- end of canvas&container -->
 <!-- <script src="../bower_components/foundation-sites/dist/foundation.min.js"></script> -->
 <script src="../dist/assets/js/app.js"></script>
+<script src="/js/matter.js"></script>
 <!-- <script src="../js/app.js"></script> -->
 <script>
+$('.slogan').matterO('ofWidth');
 // var elem = new Foundation.Sticky($("footer"), {
     // container : 'htm:bottom',
     // stickTo : 'bottom'

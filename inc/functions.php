@@ -22,14 +22,13 @@ function find_files_raw($dir, &$dir_array)
             //     find_files($dir.'/'.$val, $dir_array);
             // }
             // else{
-                $dir_array[] = $val;
+            $dir_array[] = $val;
             // }
         }
     }
     ksort($dir_array);
 }
-function find_files_with_dir($dir, &$dir_array)
-{
+function find_files_with_dir($dir, &$dir_array){
     // Create array of current directory
     $files = scandir($dir);
 
@@ -60,23 +59,27 @@ function find_files_with_dir($dir, &$dir_array)
 
 ?>
 <?php
-$topBarContent = array(	1 => 'АКТЁРСКОЕ АГЕНТСТВО' ,// todo:То, что я заменю на json
-						2 => 'МУЖЧИНЫ' ,
-						3 => 'ЖЕНЩИНЫ'  ,
-						4 => 'КОНТАКТЫ' ,
-                      	5 => 'ADMIN');
-$pagination = array(	1 => 'index.php' ,
-						2 => 'jents.php' ,
-						3 => 'ladys.php'  ,
-						4 => 'contacts.php',
-                   		5 => 'admin.php'	);
+$topBarContent = array(	
+    1 => 'АКТЁРСКОЕ АГЕНТСТВО' ,// todo:То, что я заменю на json
+    2 => 'МУЖЧИНЫ' ,
+    3 => 'ЖЕНЩИНЫ'  ,
+    4 => 'КОНТАКТЫ' ,
+    5 => 'ADMIN');
+$pagination = array(	
+    1 => 'index.php' ,
+    2 => 'jents.php' ,
+    3 => 'ladys.php'  ,
+    4 => 'contacts.php',
+    5 => 'admin.php'	);
 $menu_pages = [];
 while ( $i++ < count($topBarContent)) {
-                array_push($menu_pages, '<li><a href="'.$pagination[$i].'">'.$topBarContent[$i].'</a></li>');
-                }
-                function mtrPrint($array){      foreach ($array as $key => $value) {
-                    echo $value;
-                }}
+    array_push($menu_pages, '<li><a href="'.$pagination[$i].'">'.$topBarContent[$i].'</a></li>');
+}
+function mtrPrint($array){      
+    foreach ($array as $key => $value) {
+        echo $value;
+    }
+}
 
 
- ?>
+?>

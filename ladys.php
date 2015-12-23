@@ -5,7 +5,7 @@
 	</div> 
 	<div class="large-8 medium-9 small-12 columns">
 		<!-- <ul class="  small-up-3 medium-up-5 large-up-7 "> -->
-		<ul class="no-bullet large-up-9 medium-up-7 small-up-4  ">
+		<ul class="no-bullet large-up-10 medium-up-6 small-up-4  ">
 			<?php 
 			$dir = "images/"; 
 			$folder_list = array();
@@ -17,7 +17,7 @@
 				if($pos !== false){
 					print(" 
 		<li class='columns' >
-			<img class='thumbnail' src='".$dir."/".$file."'  alt='$file'>
+			<a id='Modal' href='#' data-open='insertPerson'><img class='thumbnail' src='".$dir."/".$file."'  alt='$file'></a>
 		</li>							
 						");
 				}
@@ -26,4 +26,11 @@
 		</ul>
 	</div>
 </div>
+<div class="large reveal" id="insertPerson" data-reveal></div>
+<script>
+	$("#insertPerson").matterO("inject","new.html");
+
+
+
+</script>
 <?php include_once("inc/footer.php");?>

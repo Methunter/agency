@@ -30,6 +30,7 @@
 			this.each(function (i,e) {
 				var ne = e.toString(); //
 				var item = ne.split("/").pop();
+				console.log(this);
 				if ( page == item) {
 					$(this).attr("class","active");
 				}
@@ -71,7 +72,14 @@
 				$modal.html(resp);
 				console.log('Injected!');
 			});
-		}
+		},
+		ofWidth : function (){
+			var container = $(this);
+			$( window ).resize(function() {
+				console.log($( window ).width()/16 + "em" );
+				container.html( "<div>" + $( window ).width()/16 + "em</div>" );
+			});
+		},
 	}
 		
 

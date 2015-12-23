@@ -1,32 +1,44 @@
+    <!-- Navigation -->
+    <div class=" sticky">
 
-<link href="http://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css" rel="stylesheet">
-<style>
+      <nav class="top-bar" data-topbar>
+        <ul class="title-area">
+          <li class="name">
+            <h1><a class="logo show-for-small-only" href="#"><img src="http://placehold.it/50x50" /></a></h1>
+          </li>
+          <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+        </ul>
 
+        <section class="top-bar-section">
 
+          <div class="logo-wrapper hide-for-small-only">
+            <div class="logo">
+              <img src="http://placehold.it/350x150">
+            </div>
+          </div>
 
+          <!-- Right Nav Section -->
+          <ul class="right">
+<?php mtrPrint($menu_pages);?>
+          </ul>
 
+          <!-- Left Nav Section -->
+          <ul class="left">
+            <li class="has-dropdown">
+              <a href="#">Menu 4</a>
+              <ul class="dropdown">
+                <li><a href="#">First link in dropdown</a></li>
+              </ul>
+            </li>
+            <li class="has-dropdown">
+              <a href="#">Menu 5</a>
+              <ul class="dropdown">
+                <li><a href="#">First link in dropdown</a></li>
+              </ul>
+            </li>
+          </ul>
 
+        </section>
+      </nav>
 
-
-</style>
-<nav class="menu">
-  <h1 class="name hide-for-medium-only"><i class="fi-widget"></i> <?php echo("$topBarContent[$i]") ?></a></h1>
-  <ul class="inline-list">
-    <?php 
-    while ( $i++ < count($topBarContent)) {
-      print_r("<li class='line'><a href='$pagination[$i]'>$topBarContent[$i]</a></li>");
-    }
-    ?>
-<!--     <li><a href="#">Home</a></li>
-    <li class="active"><a href="#">Blog</a></li>
-    <li><a href="#">Pricing</a></li>
-    <li><a href="#">About</a></li>
-    <li><a href="#">FAQ</a></li>
-    <li><a href="#">Contact</a></li> -->
-  </ul>
-</nav>
-<script>
-  var scope = $("ul.inline-list").find('a');
-  scope.matterO("enlight");
-  console.log(scope);
-</script>
+    </div><!-- /navigation -->
