@@ -61,8 +61,8 @@ function find_files_with_dir($dir, &$dir_array){
 <?php
 $topBarContent = array(	
     1 => 'АКТЁРСКОЕ АГЕНТСТВО' ,// todo:То, что я заменю на json
-    2 => 'МУЖЧИНЫ' ,
-    3 => 'ЖЕНЩИНЫ'  ,
+    2 => 'АКТЁРЫ' ,
+    3 => 'АКТРИСЫ'  ,
     4 => 'КОНТАКТЫ' ,
     5 => 'ADMIN');
 $pagination = array(	

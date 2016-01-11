@@ -1,3 +1,14 @@
+<?php 
+    // $scriptpath = substr( $_SERVER['SCRIPT_FILENAME'], 0, -4 );
+    // $paths = explode ( DIRECTORY_SEPARATOR , $scriptpath );
+    // $myName = end($paths);
+    // if ( file_exists($scriptpath)) {
+    //     # code...
+    // include_once $scriptpath . '/fbapp/php/config.inc.php';
+
+
+    // }
+ ?>
 <!DOCTYPE html>
 
 <html lang="ru" >
@@ -34,9 +45,26 @@
 <script src="/js/vendor/modernizr.js"></script>
 <script src="../js/matter.js"></script> <!-- jquery, modernizr, matter  -->
 </head>
-<?php require_once("functions.php"); 
+<?php 
+    include_once("functions.php"); 
+
 // include_once("../classes/act.class.php"); ?>
 <body>
+<div id="fb-root"></div>
+
+
+<script scr="../js/facebook.js"> </script>
+
+<!--
+  Below we include the Login Button social plugin. This button uses
+  the JavaScript SDK to present a graphical Login button that triggers
+  the FB.login() function when clicked.
+-->
+
+
+
+
+
 <div class="content" data-sticky-container>                      <!-- beginning of content -->
 <?php
 // include_once("common-top-bar.php");
@@ -44,10 +72,13 @@ include_once("nav-with-logo.php");
 // include_once("top-gear.php");
 // include_once("center-gear.php"); 
 // include_once("nav.php");
+    // $scriptpath = substr( $_SERVER['SCRIPT_FILENAME'], 0, -4 );
+
+
 ?>
 
 
-
+<!-- <div class="fb-login-button" data-max-rows="1" data-size="medium" data-show-faces="true" data-auto-logout-link="true"></div> -->
 
 
 

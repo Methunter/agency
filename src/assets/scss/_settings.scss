@@ -68,6 +68,7 @@ $global-padding: 1rem;
 $global-weight-normal: normal;
 $global-weight-bold: bold;
 $global-radius: 0;
+$matter-radius: 15px;
 $global-text-direction: ltr;
 $rem-base: 16px;
 
@@ -259,7 +260,7 @@ $callout-margin: 0 0 1rem 0;
 $callout-padding: 1rem;
 $callout-font-color: $body-font-color;
 $callout-font-color-alt: $body-background;
-$callout-radius: $global-radius;
+$callout-radius: $matter-radius;
 $callout-link-tint: 30%;
 
 // 14. Close Button

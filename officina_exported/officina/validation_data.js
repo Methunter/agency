@@ -1,0 +1,3 @@
+ var data_validation = '{"item10_text_1":{"required":false},"item11_text_1":{"required":false},"item12_text_1":{"required":false},"item35_text_1":{"required":false},"item37_text_1":{"required":false},"item38_file_1":{"accept":"txt|rtf|jpg|jpeg|png|gif"},"item49_text_1":{},"item50_text_1":{},"item54_0_checkbox":{"minlength_checkbox":0,"required":false},"item45_date_1":{"date":true,"date_config":{"minDate":"","maxDate":"","dateFormat":"dd.mm.y"}}}';
+ var data_jsplugins = '[]';
+ var data_cssplugins = '[]';
